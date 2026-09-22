@@ -52,7 +52,7 @@ Place ces 4 fichiers dans le dossier `vinted-bot` :
 - `bot.py`
 - `requirements.txt`
 - `config.json`
-- `com.luka.vintedbot.plist`
+- `com.vintedbot.app.plist`
 
 Tu peux ouvrir le dossier avec Finder :
 ```bash
@@ -121,7 +121,7 @@ Pour arrêter le test : **Ctrl + C**
 
 ### 9a — Modifier le fichier .plist
 
-Ouvre `com.luka.vintedbot.plist` et remplace les 3 occurrences de
+Ouvre `com.vintedbot.app.plist` et remplace toutes les occurrences de
 `TON_NOM_UTILISATEUR` par ton vrai nom d'utilisateur macOS.
 
 Pour connaître ton nom d'utilisateur :
@@ -132,13 +132,13 @@ whoami
 ### 9b — Copier le fichier dans le bon dossier
 
 ```bash
-cp ~/vinted-bot/com.luka.vintedbot.plist ~/Library/LaunchAgents/
+cp ~/vinted-bot/com.vintedbot.app.plist ~/Library/LaunchAgents/
 ```
 
 ### 9c — Activer le service
 
 ```bash
-launchctl load ~/Library/LaunchAgents/com.luka.vintedbot.plist
+launchctl load ~/Library/LaunchAgents/com.vintedbot.app.plist
 ```
 
 Le bot tourne maintenant en arrière-plan.
@@ -157,13 +157,13 @@ tail -f ~/vinted-bot/bot.log
 
 ### Arrêter le bot
 ```bash
-launchctl unload ~/Library/LaunchAgents/com.luka.vintedbot.plist
+launchctl unload ~/Library/LaunchAgents/com.vintedbot.app.plist
 ```
 
 ### Redémarrer le bot (après une modif de config.json)
 ```bash
-launchctl unload ~/Library/LaunchAgents/com.luka.vintedbot.plist
-launchctl load ~/Library/LaunchAgents/com.luka.vintedbot.plist
+launchctl unload ~/Library/LaunchAgents/com.vintedbot.app.plist
+launchctl load ~/Library/LaunchAgents/com.vintedbot.app.plist
 ```
 
 ### Ajouter une nouvelle extension à surveiller
@@ -180,7 +180,7 @@ vinted-bot/
 ├── bot.py                    # Le code principal du bot
 ├── config.json               # Tes recherches et webhooks
 ├── requirements.txt          # Les librairies Python nécessaires
-├── com.luka.vintedbot.plist  # Service macOS (lancement automatique)
+├── com.vintedbot.app.plist  # Service macOS (lancement automatique)
 ├── seen.db                   # Base de données des annonces déjà vues (auto-créé)
 ├── bot.log                   # Logs normaux (auto-créé)
 └── bot_error.log             # Logs d'erreurs (auto-créé)
