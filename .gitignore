@@ -1,0 +1,10 @@
+venv/
+__pycache__/
+*.pyc
+
+# logs & runtime data
+*.log
+seen.db
+
+# secrets (webhook URLs)
+config.json

@@ -1,0 +1,2 @@
+vinted-scraper==5.0.3
+requests==2.31.0

@@ -1,0 +1,11 @@
+{
+  "searches": [
+    {
+      "keyword": "ETB pokemon 151",
+      "required_keywords": ["pokemon 151", "pokémon 151"],
+      "min_price": 100,
+      "max_price": 200,
+      "webhook_url": "https://discord.com/api/webhooks/..."
+    }
+  ]
+}

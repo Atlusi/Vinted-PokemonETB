@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.luka.vintedbot</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <!-- Remplace TON_NOM_UTILISATEUR par ton nom d'utilisateur macOS -->
+        <string>/Users/luka/vinted-bot/venv/bin/python3</string>
+        <string>/Users/luka/vinted-bot/bot.py</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/luka/vinted-bot</string>
+
+    <!-- Relance automatiquement le bot s'il plante -->
+    <key>KeepAlive</key>
+    <true/>
+
+    <!-- Lance au démarrage du Mac -->
+    <key>RunAtLoad</key>
+    <true/>
+
+    <!-- Logs de sortie -->
+    <key>StandardOutPath</key>
+    <string>/Users/luka/vinted-bot/bot.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/luka/vinted-bot/bot_error.log</string>
+</dict>
+</plist>
